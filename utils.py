@@ -1,16 +1,3 @@
-# coding: utf-8
-# =====================================================================
-#  Filename:    utils.py
-#
-#  py Ver:      python 3.6 or later
-#
-#  Description: File containing reusable utility functions for the text detector & recognizer
-#
-#  Note: Requires opencv 3.4.2 or later
-#
-#  Author: Ankit Saxena (ankch24@gmail.com)
-# =====================================================================
-
 import cv2
 import time
 import numpy as np
