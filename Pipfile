@@ -4,12 +4,13 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-pytesseract = "*"
-opencv-python = "*"
-pillow = "*"
+imutils = "*"
 numpy = "*"
+argparse = "*"
+opencv-python = "*"
+pytesseract = "*"
 
 [dev-packages]
 
 [requires]
-python_full_version = "3.11.1"
+python_version = "3.11"

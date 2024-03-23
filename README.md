@@ -1,31 +1,36 @@
-# Real-Time Text Detection with Python, OpenCV, and Tesseract
+# OCR & Real-time Text Detection
+Real-time OCR with openCV EAST & Tesseract.<br/>
 
-**Prerequisites:**
+_Requires openCV 3.4.2 or above._<br/>
+_Requires Tesseract 4.0 or above._
 
-Before running the project, make sure you have the following dependencies installed:
+## Real Time OCR
+For text recognition on a live web-cam feed:
+```commandline
+python real_time_ocr.py --east frozen_east_text_detection.pb
+```
 
-- Python
-- OpenCV (cv2)
-- Tesseract OCR
-- NumPy
-- Pillow (PIL)
+For text recognition on a video file:
+```commandline
+python real_time_ocr.py --east frozen_east_text_detection.pb --video test.avi
+```
 
-Ensure that you download and install Tesseract OCR and set the path to the Tesseract executable in the code.
 
-**How to Run:**
+## Text Detection
+For text detection on image:
+```commandline
+python text_detection.py --image test.png --east frozen_east_text_detection.pb
+```
 
-1. Clone this repository or download the project files.
+For text detection on video or web-cam:
+```commandline
+python video_text_detection.py --east frozen_east_text_detection.pb
+python video_text_detection.py --east frozen_east_text_detection.pb --video test.avi
+```
 
-2. Open the Python script in your preferred code editor.
-
-3. Set the path to the Tesseract executable (`pytesseract.pytesseract.tesseract_cmd`) to the location of your Tesseract installation.
-
-4. Customize any other settings, such as webcam resolution, blur parameters, or text display position in the code as needed.
-
-5. Run the Python script:
-
-   ```bash
-   python real_time_text_detection.py
-   ```
-
-The webcam or screen video feed will be displayed, and the recognized text will be overlaid in green color. Press 'q' to exit the program.
+## Text Recognition
+For text recognition on image:
+```commandline
+python text_recognition.py --east frozen_east_text_detection.pb --image test.png
+python text_recognition.py --east frozen_east_text_detection.pb --image test.png --padding 0.25
+```
