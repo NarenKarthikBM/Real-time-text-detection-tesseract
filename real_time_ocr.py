@@ -7,6 +7,7 @@ import imutils
 import time
 import cv2
 import pytesseract
+from face_detection import detect_face_bounding_box
 
 # setting up tesseract path
 pytesseract.pytesseract.tesseract_cmd = r'/opt/homebrew/Cellar/tesseract/5.3.4_1/bin/tesseract'
@@ -148,6 +149,8 @@ if __name__ == '__main__':
                         cv2.FONT_HERSHEY_SIMPLEX, 1.2, (0, 0, 255), 3)
 
         fps.update()
+
+        face = detect_face_bounding_box(orig)
 
         cv2.imshow("Detection", orig)
         key = cv2.waitKey(1) & 0xFF
